@@ -1,6 +1,6 @@
 # CTCallR
 
-![](
+![](https://github.com/galder-max/CTCallR/blob/main/CTCallR/f393bb05-c737-4cc3-e040-11ac0d48452a_im.svg
 "CTCallR - A stringent ChromoThripsis Caller from human WGS in R")
 
 The CTCallR is an R package destined at calling chromothripsis from
