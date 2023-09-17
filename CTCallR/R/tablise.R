@@ -1,0 +1,43 @@
+tablise <-
+function(cp.chr,i,nms)
+{
+    .tablise <- function(cp.chr,i,nms,ww)
+    {
+        rbind(c(as.character(nms),
+                as.character(cp.chr$start[1]),
+                as.character(cp.chr$end[1]),
+                as.character(paste0("chr",i,cp.chr$arms[1])),
+                as.character(cp.chr$densities[1]),
+                as.character(cp.chr$Nevents[1]),
+                as.character(cp.chr$testExpRegion[[1]]),
+                as.character(paste(cp.chr$cnStates[[ww[1]]]$states,sep="",collapse=";")),
+                as.character(paste(cp.chr$cnStates[[ww[1]]]$sizes,sep="",collapse=";")),
+                as.character(cp.chr$cnStates[[ww[1]]]$coveragemaxStates.modeSegs),
+                as.character(cp.chr$cnStates[[ww[1]]]$coveragemaxStates.maxCov)),
+              c(as.character(nms),
+                as.character(cp.chr$start[2]),
+                as.character(cp.chr$end[2]),
+                as.character(paste0("chr",i,cp.chr$arms[2])),
+                as.character(cp.chr$densities[2]),
+                as.character(cp.chr$Nevents[2]),
+                as.character(cp.chr$testExpRegion[[2]]),
+                as.character(paste(cp.chr$cnStates[[ww[2]]]$states,sep="",collapse=";")),
+                as.character(paste(cp.chr$cnStates[[ww[2]]]$sizes,sep="",collapse=";")),
+                as.character(cp.chr$cnStates[[ww[2]]]$coveragemaxStates.modeSegs),
+                as.character(cp.chr$cnStates[[ww[2]]]$coveragemaxStates.maxCov)))
+    }
+    ww <- which(!sapply(cp.chr$cnStates, is.null))[1:2]
+    if(all(c("p","q")%in%cp.chr$arms))
+        return(.tablise(cp.chr,i,nms,ww))
+    c(as.character(nms),
+      as.character(cp.chr$start),
+      as.character(cp.chr$end),
+      as.character(paste0("chr",i,cp.chr$arms)),
+      as.character(cp.chr$densities),
+      as.character(cp.chr$Nevents),
+      as.character(cp.chr$testExpRegion[[1]]),
+      as.character(paste(cp.chr$cnStates[[ww[1]]]$states,sep="",collapse=";")),
+      as.character(paste(cp.chr$cnStates[[ww[1]]]$sizes,sep="",collapse=";")),
+      as.character(cp.chr$cnStates[[ww[1]]]$coveragemaxStates.modeSegs),
+      as.character(cp.chr$cnStates[[ww[1]]]$coveragemaxStates.maxCov))
+}

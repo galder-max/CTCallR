@@ -1,0 +1,9 @@
+Package: CTCallR
+Type: Package
+Title: Chromothripsis Caller in R
+Version: 1.0
+Date: 2023-09-14
+Author: maxime.tarabichi@ulb.be
+Maintainer:  <maxime.tarabichi@ulb.be>
+Description: see ?CTCallR
+License: GNU General Public License v3.0

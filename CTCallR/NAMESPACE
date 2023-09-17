@@ -1,0 +1,3 @@
+export("CP", "CTCallR", "deriveTable", "doPCF", "getCNstates", "mytry",
+       "returnCov", "run_tests", "summaryHD", "tablise", "testclass",
+       "testExp", "testorder", "treatPCF")
