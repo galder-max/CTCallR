@@ -1,7 +1,5 @@
 # CTCallR
 
-![](https://github.com/galder-max/CTCallR/blob/main/CTCallR/f393bb05-c737-4cc3-e040-11ac0d48452a_im.svg
-"CTCallR - A stringent ChromoThripsis Caller from human WGS in R")
 
 The CTCallR is an R package destined at calling chromothripsis from
 whole-genome sequencing data. It applies a series of tests proposed in
@@ -12,6 +10,11 @@ high-density-breakpoint regions as "clusters of breakpoints" or
 
 It expects the user to have run a copy-number and structural variant
 caller and format their output properly.
+
+An example output figure is shown below:
+
+![](https://github.com/galder-max/CTCallR/blob/main/CTCallR/f393bb05-c737-4cc3-e040-11ac0d48452a_im.svg
+"CTCallR - A stringent ChromoThripsis Caller from human WGS in R")
 
 
 ## Install
